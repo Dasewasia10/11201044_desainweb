@@ -59,6 +59,8 @@ a:link {
   background-color: none;
   margin: 20px;
   text-align: center;
+  width: 100%;
+  height: auto;
 }
 
 .section img {
