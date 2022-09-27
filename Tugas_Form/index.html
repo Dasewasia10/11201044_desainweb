@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Hubungi Kami</title>
+  </head>
+  <body>
+    <div class="contactform">
+      <h2>Hubungi Kami</h2>
+      <form action="#" method="POST" onSubmit="tampilAlert()">
+        <div>
+          <label for="name">Nama *</label><br />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Cth. Mike Walker"
+            pattern=".*\S.*"
+          /><br /><br />
+        </div>
+        <div>
+          <label for="email">Email *</label><br />
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Cth. mikewalker09@gmail.com"
+            pattern=".*\S.*"
+          /><br /><br />
+        </div>
+        <div>
+          <label for="isi_pesan">Isi Pesan</label><br />
+          <textarea
+            name="isi_pesan"
+            rows="4"
+            cols="50"
+            placeholder="Keluarkan apapun yang mau kamu sampaikan..."
+          ></textarea
+          ><br />
+        </div>
+        <div>
+          <input type="submit" value="Submit" />
+        </div>
+      </form>
+    </div>
+    <script type="text/javascript">
+      function tampilAlert() {
+        var nama = document.getElementById("name");
+        var email = document.getElementById("email");
+        if (!nama.value) {
+          nama.style.border = "2px solid";
+          nama.style.borderColor = "red";
+          window.alert("Mohon untuk mengisi kolom berbintang terlebih dulu!");
+        } else if (!email.value) {
+          email.style.border = "2px solid";
+          email.style.borderColor = "red";
+          window.alert("Mohon untuk mengisi kolom berbintang terlebih dulu!");
+        }
+      }
+      submitButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        tampilAlert();
+      });
+    </script>
+  </body>
+</html>
